@@ -1,0 +1,34 @@
+name: Main Java build pipeline for RFT project work
+
+on: push
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up JDK 11
+        uses: actions/setup-java@v2
+        with:
+          java-version: '11'
+          distribution: 'adopt'
+      - name: Compile the project
+        run: mvn compile
+      - name: Run unit tests on the project
+        run: mvn test
+      - name: Generate jacoco report
+        if: always()
+        run: mvn jacoco:report
+      - name: Publish jacoco report
+        if: always()
+        uses: actions/upload-artifact@v2
+        with:
+          name: shopping-list-coverage
+          path: ./target/site/jacoco
+      - name: Package the application
+        run: mvn package
+      - name: Publish the application
+        uses: actions/upload-artifact@v2
+        with:
+          name: shopping-list-war
+          path: ./target/rft*
