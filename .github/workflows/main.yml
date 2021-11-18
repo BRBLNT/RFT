@@ -23,12 +23,12 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v2
         with:
-          name: shopping-list-coverage
+          name: rft-project-work-coverage
           path: ./target/site/jacoco
       - name: Package the application
         run: mvn package
       - name: Publish the application
         uses: actions/upload-artifact@v2
         with:
-          name: shopping-list-war
+          name: rft-project-work-war
           path: ./target/rft*
