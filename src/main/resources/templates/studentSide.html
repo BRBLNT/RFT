@@ -19,41 +19,40 @@
 <table>
     <tr>
         <th>USER</th>
-        <td>Your Name</td>
+        <td th:text="${user.name}">Your Name</td>
     </tr>
     <tr>
         <th>EMAIL</th>
-        <td>example@example.hu</td>
+        <td th:text="${user.email}">example@example.hu</td>
     </tr>
     <tr>
         <th>ROLE</th>
-        <td>Teacher/Student</td>
+        <td th:text="${user.role}">Teacher/Student</td>
     </tr>
 </table>
 
 <br><br><br>
 
-<table>
+<table th:each="subject: ${users}">
     <tr>
+        <th> ID </th>
         <th> NAME </th>
-        <th> TEACHER </th>
+        <th> TEACHER ID</th>
         <th> DATE </th>
         <th> CLASSROOM </th>
-        <th> MAX PARTICIPANTS </th>
-        <th> ACTUAL </th>
-        <th> APPLY/DISAPPLY </th>
+        <th th:text="${}"> EDIT </th>
     </tr>
     <tr>
-        <td>#</td>
-        <td>#</td>
-        <td>#</td>
-        <td>#</td>
-        <td>#</td>
-        <td>#</td>
-        <td>link<td>
+        <td th:text="${subject.id}">#</td>
+        <td th:text="${subject.name}">#</td>
+        <td th:text="${subject.teacherId}">#</td>
+        <td th:text="${subject.subjectDate}">#</td>
+        <td th:text="${subject.classroom}">#</td>
+        <td th:text="${}">link</td>
     </tr>
 
 </table>
+
 
 </body>
 </html>
