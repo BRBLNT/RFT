@@ -35,7 +35,7 @@ public class SubjectTransformer {
         return result;
     }
 
-    private SubjectEntryView transformToView(SubjectEntryEntity entity){
+    public SubjectEntryView transformToView(SubjectEntryEntity entity){
         SubjectEntryView result = null;
         if(entity != null){
             result = SubjectEntryView.builder()
@@ -48,7 +48,7 @@ public class SubjectTransformer {
         return result;
     }
 
-    private SubjectEntryEntity transformToEntity(SubjectEntryView view){
+    public SubjectEntryEntity transformToEntity(SubjectEntryView view){
         SubjectEntryEntity result = null;
         if(view != null){
             result = new SubjectEntryEntity();
