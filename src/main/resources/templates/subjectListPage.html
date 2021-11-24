@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Subject ListPage</title>
+</head>
+<body>
+<h3>Subjects: </h3>
+<table>
+    <tr th:each="subject: ${subjects}">
+        <td th:text="${subject.id}" />
+        <td th:text="${subject.name}" />
+    </tr>
+</table>
+</body>
+</html>

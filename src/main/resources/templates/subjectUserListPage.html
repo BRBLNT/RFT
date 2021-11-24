@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Subject User List Page</title>
+</head>
+<body>
+<h3>Subjects-Users: </h3>
+<table>
+    <tr th:each="subjectUser: ${subjectUsers}">
+        <td th:text="${subjectUser.userId}" />
+        <td th:text="${subjectUser.subjectId}" />
+    </tr>
+</table>
+</body>
+</html>
