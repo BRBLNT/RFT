@@ -8,7 +8,9 @@ import hu.nye.rft.error.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.stereotype.Component;
 
+@Component
 public class DefaultSubjectUserDataAccessObject implements SubjectUserDataObjectAccessInterface{
 
     private SubjectUserRepository userRepository;

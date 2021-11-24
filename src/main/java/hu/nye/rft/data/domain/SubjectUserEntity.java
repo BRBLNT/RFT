@@ -18,11 +18,9 @@ public class SubjectUserEntity {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @OneToMany(targetEntity = UserEntity.class, fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "user_id",referencedColumnName = "id")
     private Long userId;
 
-    @OneToOne(targetEntity = SubjectEntryEntity.class, cascade = CascadeType.ALL)
     @JoinColumn(name = "subject_id", referencedColumnName = "id")
     private Long subjectId;
 
