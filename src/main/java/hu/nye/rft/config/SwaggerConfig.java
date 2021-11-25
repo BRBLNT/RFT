@@ -27,18 +27,29 @@ public class SwaggerConfig implements WebMvcConfigurer {
     @Bean
     public Docket apiDocket() {
         return new Docket(DocumentationType.SWAGGER_2)
-                .apiInfo(getApiInfo())
+                .apiInfo(apiInfo())
                 .select()
                 .apis(RequestHandlerSelectors.any())
                 .paths(PathSelectors.any())
                 .build();
     }
 
-    private ApiInfo getApiInfo() {
+    private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 .title("Swagger API Doc")
                 .description("Template Application")
                 .version("1.0.0")
                 .build();
     }
+
+    private ApiInfo metaData() {
+        return new ApiInfoBuilder()
+                .title("Spring Boot Swagger App")
+                .description("\"Spring Boot Swagger Server App\"")
+                .version("1.0.0")
+                .license("Apache License Version 2.0")
+                .licenseUrl("https://www.apache.org/licenses/LICENSE-2.0\"")
+                .build();
+    }
+
 }
