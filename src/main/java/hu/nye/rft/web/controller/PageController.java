@@ -18,6 +18,7 @@ public class PageController {
 
     private static final String ROOT_MAPPING = "/";
     private static final String USER_PAGE_LOGIN = "/login";
+    private static final String USER_PAGE_REGISTRATION = "/registration";
     private static final String TEACHER_SIDE = "/teacherSide";
     private static final String STUDENT_SIDE = "/studentSide";
     //private static final String SUBJECT_SIDE = "/{userId}/subject/{id}";
@@ -60,6 +61,13 @@ public class PageController {
         return "login";
     }
 
+    @RequestMapping(USER_PAGE_REGISTRATION)
+    public String registration() {
+        return "registration";
+    }
+
+
+    /*
     @RequestMapping(TEACHER_SIDE)
     public String teacherSide() {
         return "teacherSide";
@@ -69,6 +77,8 @@ public class PageController {
     public String studentSide() {
         return "studentSide";
     }
+
+     */
 
     @GetMapping(USER_PAGE_MAPPING2)
     public String userPage(Model model) {
