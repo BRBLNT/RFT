@@ -19,10 +19,10 @@ public class SubjectUserEntity {
     private Long id;
 
     @JoinColumn(name = "user_id",referencedColumnName = "id")
-    private Long userId;
+    private Integer userId;
 
     @JoinColumn(name = "subject_id", referencedColumnName = "id")
-    private Long subjectId;
+    private Integer subjectId;
 
     public Long getId() {
         return id;
@@ -32,19 +32,19 @@ public class SubjectUserEntity {
         this.id = id;
     }
 
-    public Long getUserId() {
+    public Integer getUserId() {
         return userId;
     }
 
-    public void setUserId(Long userId) {
+    public void setUserId(Integer userId) {
         this.userId = userId;
     }
 
-    public Long getSubjectId() {
+    public Integer getSubjectId() {
         return subjectId;
     }
 
-    public void setSubjectId(Long subjectId) {
+    public void setSubjectId(Integer subjectId) {
         this.subjectId = subjectId;
     }
 }
