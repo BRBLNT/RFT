@@ -18,9 +18,9 @@ public class SubjectUserEntity {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String userId;
+    private Long userId;
 
-    private String subjectId;
+    private Long subjectId;
 
     public Long getId() {
         return id;
@@ -30,19 +30,19 @@ public class SubjectUserEntity {
         this.id = id;
     }
 
-    public String getUserId() {
+    public Long getUserId() {
         return userId;
     }
 
-    public void setUserId(String userId) {
+    public void setUserId(Long userId) {
         this.userId = userId;
     }
 
-    public String getSubjectId() {
+    public Long getSubjectId() {
         return subjectId;
     }
 
-    public void setSubjectId(String subjectId) {
+    public void setSubjectId(Long subjectId) {
         this.subjectId = subjectId;
     }
 }
