@@ -10,6 +10,6 @@ import lombok.Data;
 @Data
 public class CreateSubjectUserRequest {
 
-    private Integer userId;
-    private Integer subjectId;
+    private String userId;
+    private String subjectId;
 }
