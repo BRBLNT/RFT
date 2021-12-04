@@ -1,6 +1,7 @@
 package hu.nye.rft.web.domain;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
 
 import lombok.Builder;
 import lombok.Data;
@@ -9,8 +10,6 @@ import lombok.Data;
 @Data
 public class CreateSubjectUserRequest {
 
-    @NotBlank(message = "User ID is mandatory")
-    private Long userId;
-    @NotBlank(message = "Subject ID is mandatory")
-    private Long subjectId;
+    private String userId;
+    private String subjectId;
 }

@@ -8,6 +8,6 @@ import lombok.Data;
 public class SubjectUserView {
 
     private Long id;
-    private Long userId;
-    private Long subjectId;
+    private String userId;
+    private String subjectId;
 }

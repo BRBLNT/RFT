@@ -14,7 +14,6 @@ public class CreateSubjectRequest {
 
     @NotBlank(message = "Name is mandatory")
     private String name;
-    @NotBlank(message = "Teacher ID is mandatory")
     private Long teacherId;
     private String date;
     private String classroom;

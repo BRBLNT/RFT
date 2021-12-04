@@ -18,11 +18,9 @@ public class SubjectUserEntity {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @JoinColumn(name = "user_id",referencedColumnName = "id")
-    private Long userId;
+    private String userId;
 
-    @JoinColumn(name = "subject_id", referencedColumnName = "id")
-    private Long subjectId;
+    private String subjectId;
 
     public Long getId() {
         return id;
@@ -32,19 +30,19 @@ public class SubjectUserEntity {
         this.id = id;
     }
 
-    public Long getUserId() {
+    public String getUserId() {
         return userId;
     }
 
-    public void setUserId(Long userId) {
+    public void setUserId(String userId) {
         this.userId = userId;
     }
 
-    public Long getSubjectId() {
+    public String getSubjectId() {
         return subjectId;
     }
 
-    public void setSubjectId(Long subjectId) {
+    public void setSubjectId(String subjectId) {
         this.subjectId = subjectId;
     }
 }
